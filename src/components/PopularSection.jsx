@@ -30,8 +30,8 @@ const PopularSection = () => {
                             <div className="card-body">
                                 <h2 className="card-title">{service?.serviceName}</h2>
                                 <div className=' flex justify-between'>
-                                    <p>Price:{service?.price}</p>
-                                    <p>Rating:{service?.rating}</p>
+                                      <p className=' text-xs font-medium'>Price: {service?.price}</p>
+                                    <p className=' text-xs font-medium'>Rating: {service?.rating}</p>
                                 </div>
                                 <div className="card-actions justify-end">
                                     <button className="btn btn-primary">View Details</button>
