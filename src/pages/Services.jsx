@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const PopularSection = () => {
+const Services = () => {
 
     const [services, setServices] = useState([]);
 
@@ -10,17 +10,11 @@ const PopularSection = () => {
             .then(data => setServices(data))
             .catch(err => console.log(err))
     }, [])
-
-
-    console.log(services)
     return (
-        <div className=' mt-8 px-[145px]'>
-            <div>
-                <h3 className=' font-bold text-3xl text-center'>Popular Winter Care Services</h3>
-            </div>
+        <div className='px-[145px]'>
             <div className=' grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-12 gap-10'>
                 {
-                    services.slice(0,3).map(service =>
+                    services.map(service =>
                         <div className="card bg-base-100 w-96 shadow-sm">
                             <figure>
                                 <img className='w-full h-[300px] object-cover'
@@ -45,4 +39,4 @@ const PopularSection = () => {
     );
 };
 
-export default PopularSection;
+export default Services;
