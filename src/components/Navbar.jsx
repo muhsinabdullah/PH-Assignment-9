@@ -23,13 +23,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className=' font-semibold text-md'><Link to="/">Home</Link></li>
-                    <li className=' font-semibold text-md'><Link to="/services">Services</Link></li>
-                    <li className=' font-semibold text-md'><Link to="/profile">My Profile</Link></li>
+                    <li className=' font-semibold text-md text-primary'><Link to="/">Home</Link></li>
+                    <li className=' font-semibold text-md text-primary'><Link to="/services">Services</Link></li>
+                    <li className=' font-semibold text-md text-primary'><Link to="/profile">My Profile</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                <a className="btn text-primary">Login</a>
             </div>
         </div>
     );

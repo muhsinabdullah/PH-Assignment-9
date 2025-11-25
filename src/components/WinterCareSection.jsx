@@ -3,7 +3,7 @@ import React from 'react';
 const WinterCareSection = () => {
     return (
         <div className=' mt-8'>
-            <h2 class="text-3xl font-bold text-center mb-8">Winter Care Tips for Pets</h2>
+            <h2 class="text-3xl font-bold text-center text-primary mb-8">Winter Care Tips for Pets</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
                 <div class="card shadow-lg bg-base-100 border">
                     <div class="card-body">
