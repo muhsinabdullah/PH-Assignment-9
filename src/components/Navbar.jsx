@@ -17,15 +17,15 @@ const Navbar = () => {
                         <li><a>My Profile</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">
+                <a className="text-xl">
                     <img className=' w-auto h-[65px]' src={logo} alt="" />
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/profile">My Profile</Link></li>
+                    <li className=' font-semibold text-md'><Link to="/">Home</Link></li>
+                    <li className=' font-semibold text-md'><Link to="/services">Services</Link></li>
+                    <li className=' font-semibold text-md'><Link to="/profile">My Profile</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
