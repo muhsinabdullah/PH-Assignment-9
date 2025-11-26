@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { UserStar } from 'lucide-react';
 const PopularSection = () => {
 
     const [services, setServices] = useState([]);
@@ -20,7 +20,7 @@ const PopularSection = () => {
             </div>
             <div className=' grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-12 gap-10'>
                 {
-                    services.slice(0,3).map(service =>
+                    services.slice(0, 3).map(service =>
                         <div className="card bg-base-100 w-96 shadow-sm">
                             <figure>
                                 <img className='w-full h-[300px] object-cover'
@@ -30,8 +30,8 @@ const PopularSection = () => {
                             <div className="card-body">
                                 <h2 className="card-title">{service?.serviceName}</h2>
                                 <div className=' flex justify-between'>
-                                      <p className=' text-xs font-medium'>Price: {service?.price}</p>
-                                    <p className=' text-xs font-medium'>Rating: {service?.rating}</p>
+                                <div className="badge badge-primary p-4">${service?.price}</div>
+                                <div className="badge badge-success p-4"><UserStar />{service?.rating}</div>
                                 </div>
                                 <div className="card-actions justify-end">
                                     <button className="btn btn-primary">View Details</button>
