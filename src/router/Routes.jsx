@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Services from "../pages/Services";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PrivetRout from "./PrivetRout";
 
 
 const router = createBrowserRouter([

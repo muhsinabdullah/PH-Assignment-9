@@ -1,8 +1,17 @@
-import React from 'react';
-import logo from '../assets/logo.png';
+import React, { useContext } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { signOut } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
+
 const Navbar = () => {
+
+    const {user} = useContext(AuthContext);
+
+    const handleLogOut =() =>{
+        signOut(auth)
+    }
+
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -13,25 +22,31 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
-                        <li><a>Services</a></li>
-                        <li><a>My Profile</a></li>
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li><Link>Services</Link></li>
+                        <li><Link to='profile'>My Profile</Link></li>
                     </ul>
                 </div>
-                <a className="text-xl">
-                    <img className=' w-auto h-[65px]' src={logo} alt="" />
-                </a>
+                <Link to={'/'} className="btn btn-ghost text-xl">PetPaw</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className=' font-semibold text-md text-primary'><Link to="/">Home</Link></li>
-                    <li className=' font-semibold text-md text-primary'><Link to="/services">Services</Link></li>
-                    <li className=' font-semibold text-md text-primary'><Link to="/profile">My Profile</Link></li>
+                    <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'/services'}>Services</Link></li>
+                    <li><Link to='profile'>My Profile</Link></li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to={'/login'} className="btn text-primary">Login</Link>
+            {
+                user && <div className="navbar-end">
+                <button onClick={handleLogOut} className="btn"><Link to={'/'}>Log Out</Link></button>
             </div>
+            }
+            {
+                !user && <div className="navbar-end">
+                <Link to={'/login'} className="btn">Login</Link>
+            </div>
+            }
+            
         </div>
     );
 };
