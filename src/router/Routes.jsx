@@ -8,6 +8,7 @@ import PrivetRout from "./PrivetRout";
 import FoprgetPass from "../pages/FoprgetPass";
 import Error from "../pages/Error";
 import Profile from "../pages/Profile";
+import ServiceDetails from "../pages/ServicesDetails";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: '/profile',
         element: <PrivetRout><Profile></Profile></PrivetRout>
       },
+      {
+        path: '/details/:id',
+        element: <PrivetRout><ServiceDetails></ServiceDetails></PrivetRout>
+      }
     ]
   },
 ]);

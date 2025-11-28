@@ -47,7 +47,7 @@ const Services = () => {
                                     <div className="badge badge-success p-4"><UserStar />{service?.rating}</div>
                                 </div>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">View Details</button>
+                                   <Link to={`/details/${service?.serviceId}`}> <button className="btn btn-primary">View Details</button></Link>
                                 </div>
                             </div>
                         </div>
