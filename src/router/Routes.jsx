@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import PrivetRout from "./PrivetRout";
 import FoprgetPass from "../pages/FoprgetPass";
 import Error from "../pages/Error";
+import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
       {
         path: '/forgetPass/:email',
         Component: FoprgetPass,
-      }
+      },
+      {
+        path: '/profile',
+        element: <PrivetRout><Profile></Profile></PrivetRout>
+      },
     ]
   },
 ]);

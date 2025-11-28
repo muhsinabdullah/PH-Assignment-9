@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router';
-import { AuthContext } from '../provider/AuthProvider';
+import { AuthContext } from '../Provider/AuthProvider';
 import {updateProfile } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 import { FcGoogle } from "react-icons/fc";
