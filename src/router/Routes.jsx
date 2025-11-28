@@ -5,12 +5,14 @@ import Services from "../pages/Services";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivetRout from "./PrivetRout";
-
+import FoprgetPass from "../pages/FoprgetPass";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout></RootLayout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -18,15 +20,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/services',
-        element: <Services/>
+        element: <Services />
       },
       {
         path: '/login',
-        element: <Login/>
+        element: <Login />
       },
       {
         path: '/signup',
-        element: <Register/>
+        element: <Register />
+      },
+      {
+        path: '/forgetPass/:email',
+        Component: FoprgetPass,
       }
     ]
   },
